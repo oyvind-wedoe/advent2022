@@ -157,40 +157,95 @@ move 1 from 1 to 2
     @Test
     fun `day7a`() {
 
+        val testInput = """
+${'$'} cd /
+${'$'} ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+${'$'} cd a
+${'$'} ls
+dir e
+29116 f
+2557 g
+62596 h.lst
+${'$'} cd e
+${'$'} ls
+584 i
+${'$'} cd ..
+${'$'} cd ..
+${'$'} cd d
+${'$'} ls
+4060174 j
+8033020 d.log
+5626152 d.ext
+7214296 k
+		""".trimIndent()
+
+        assertEquals(95437, day7Service.a(testInput))
     }
 
     @Test
     fun `day7b`() {
+        val testInput = """
+${'$'} cd /
+${'$'} ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+${'$'} cd a
+${'$'} ls
+dir e
+29116 f
+2557 g
+62596 h.lst
+${'$'} cd e
+${'$'} ls
+584 i
+${'$'} cd ..
+${'$'} cd ..
+${'$'} cd d
+${'$'} ls
+4060174 j
+8033020 d.log
+5626152 d.ext
+7214296 k
+		""".trimIndent()
 
+        assertEquals(24933642, day7Service.b(testInput))
     }
 
-    @Test
-    fun `day8a`() {
-
-    }
-
-    @Test
-    fun `day8b`() {
-
-    }
-
-    @Test
-    fun `day9a`() {
-
-    }
-
-    @Test
-    fun `day9b`() {
-
-    }
-
-    @Test
-    fun `day10a`() {
-
-    }
-
-    @Test
-    fun `day10b`() {
-
-    }
 }
+
+@Test
+fun `day8a`() {
+
+}
+
+@Test
+fun `day8b`() {
+
+}
+
+@Test
+fun `day9a`() {
+
+}
+
+@Test
+fun `day9b`() {
+
+}
+
+@Test
+fun `day10a`() {
+
+}
+
+@Test
+fun `day10b`() {
+
+}
+
