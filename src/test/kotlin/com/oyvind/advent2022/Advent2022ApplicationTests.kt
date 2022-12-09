@@ -156,7 +156,6 @@ move 1 from 1 to 2
 
     @Test
     fun `day7a`() {
-
         val testInput = """
 ${'$'} cd /
 ${'$'} ls
@@ -217,35 +216,50 @@ ${'$'} ls
         assertEquals(24933642, day7Service.b(testInput))
     }
 
+
+    @Test
+    fun `day8a`() {
+        val testInput = """
+        30373
+        25512
+        65332
+        33549
+        35390        
+		""".trimIndent()
+
+        assertEquals(21, day8Service.a(testInput))
+    }
+
+    @Test
+    fun `day8b`() {
+        val testInput = """
+        30373
+        25512
+        65332
+        33549
+        35390
+		""".trimIndent()
+
+        assertEquals(8, day8Service.b(testInput))
+    }
+
+    @Test
+    fun `day9a`() {
+
+    }
+
+    @Test
+    fun `day9b`() {
+
+    }
+
+    @Test
+    fun `day10a`() {
+
+    }
+
+    @Test
+    fun `day10b`() {
+
+    }
 }
-
-@Test
-fun `day8a`() {
-
-}
-
-@Test
-fun `day8b`() {
-
-}
-
-@Test
-fun `day9a`() {
-
-}
-
-@Test
-fun `day9b`() {
-
-}
-
-@Test
-fun `day10a`() {
-
-}
-
-@Test
-fun `day10b`() {
-
-}
-
