@@ -18,6 +18,15 @@ class Advent2022ApplicationTests {
     private val day8Service = Day8Service()
     private val day9Service = Day9Service()
     private val day10Service = Day10Service()
+    private val day11Service = Day11Service()
+    private val day12Service = Day12Service()
+    private val day13Service = Day13Service()
+    private val day14Service = Day14Service()
+    private val day15Service = Day15Service()
+    private val day16Service = Day16Service()
+    private val day17Service = Day17Service()
+    private val day18Service = Day18Service()
+    private val day19Service = Day19Service()
 
 
     @Test
@@ -302,15 +311,408 @@ ${'$'} ls
         assertEquals(2597, day9Service.b(File("src/main/resources/input/input9.txt").readText()))
     }
 
-
-
     @Test
     fun `day10a`() {
+        val testInput = """
+            addx 15
+            addx -11
+            addx 6
+            addx -3
+            addx 5
+            addx -1
+            addx -8
+            addx 13
+            addx 4
+            noop
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx -35
+            addx 1
+            addx 24
+            addx -19
+            addx 1
+            addx 16
+            addx -11
+            noop
+            noop
+            addx 21
+            addx -15
+            noop
+            noop
+            addx -3
+            addx 9
+            addx 1
+            addx -3
+            addx 8
+            addx 1
+            addx 5
+            noop
+            noop
+            noop
+            noop
+            noop
+            addx -36
+            noop
+            addx 1
+            addx 7
+            noop
+            noop
+            noop
+            addx 2
+            addx 6
+            noop
+            noop
+            noop
+            noop
+            noop
+            addx 1
+            noop
+            noop
+            addx 7
+            addx 1
+            noop
+            addx -13
+            addx 13
+            addx 7
+            noop
+            addx 1
+            addx -33
+            noop
+            noop
+            noop
+            addx 2
+            noop
+            noop
+            noop
+            addx 8
+            noop
+            addx -1
+            addx 2
+            addx 1
+            noop
+            addx 17
+            addx -9
+            addx 1
+            addx 1
+            addx -3
+            addx 11
+            noop
+            noop
+            addx 1
+            noop
+            addx 1
+            noop
+            noop
+            addx -13
+            addx -19
+            addx 1
+            addx 3
+            addx 26
+            addx -30
+            addx 12
+            addx -1
+            addx 3
+            addx 1
+            noop
+            noop
+            noop
+            addx -9
+            addx 18
+            addx 1
+            addx 2
+            noop
+            noop
+            addx 9
+            noop
+            noop
+            noop
+            addx -1
+            addx 2
+            addx -37
+            addx 1
+            addx 3
+            noop
+            addx 15
+            addx -21
+            addx 22
+            addx -6
+            addx 1
+            noop
+            addx 2
+            addx 1
+            noop
+            addx -10
+            noop
+            noop
+            addx 20
+            addx 1
+            addx 2
+            addx 2
+            addx -6
+            addx -11
+            noop
+            noop
+            noop
+		""".trimIndent()
 
+        assertEquals(13140, day10Service.a(testInput))
     }
 
     @Test
     fun `day10b`() {
+        val testInput = """
+            addx 15
+            addx -11
+            addx 6
+            addx -3
+            addx 5
+            addx -1
+            addx -8
+            addx 13
+            addx 4
+            noop
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx 5
+            addx -1
+            addx -35
+            addx 1
+            addx 24
+            addx -19
+            addx 1
+            addx 16
+            addx -11
+            noop
+            noop
+            addx 21
+            addx -15
+            noop
+            noop
+            addx -3
+            addx 9
+            addx 1
+            addx -3
+            addx 8
+            addx 1
+            addx 5
+            noop
+            noop
+            noop
+            noop
+            noop
+            addx -36
+            noop
+            addx 1
+            addx 7
+            noop
+            noop
+            noop
+            addx 2
+            addx 6
+            noop
+            noop
+            noop
+            noop
+            noop
+            addx 1
+            noop
+            noop
+            addx 7
+            addx 1
+            noop
+            addx -13
+            addx 13
+            addx 7
+            noop
+            addx 1
+            addx -33
+            noop
+            noop
+            noop
+            addx 2
+            noop
+            noop
+            noop
+            addx 8
+            noop
+            addx -1
+            addx 2
+            addx 1
+            noop
+            addx 17
+            addx -9
+            addx 1
+            addx 1
+            addx -3
+            addx 11
+            noop
+            noop
+            addx 1
+            noop
+            addx 1
+            noop
+            noop
+            addx -13
+            addx -19
+            addx 1
+            addx 3
+            addx 26
+            addx -30
+            addx 12
+            addx -1
+            addx 3
+            addx 1
+            noop
+            noop
+            noop
+            addx -9
+            addx 18
+            addx 1
+            addx 2
+            noop
+            noop
+            addx 9
+            noop
+            noop
+            noop
+            addx -1
+            addx 2
+            addx -37
+            addx 1
+            addx 3
+            noop
+            addx 15
+            addx -21
+            addx 22
+            addx -6
+            addx 1
+            noop
+            addx 2
+            addx 1
+            noop
+            addx -10
+            noop
+            noop
+            addx 20
+            addx 1
+            addx 2
+            addx 2
+            addx -6
+            addx -11
+            noop
+            noop
+            noop
+		""".trimIndent()
+        assertEquals(1, day10Service.b(testInput))
+    }
 
+    @Test
+    fun `day11a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day11Service.a(testInput))
+    }
+
+    @Test
+    fun `day11b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day11Service.b(testInput))
+    }
+
+    @Test
+    fun `day12a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day12Service.a(testInput))
+    }
+
+    @Test
+    fun `day12b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day12Service.b(testInput))
+    }
+
+    @Test
+    fun `day13a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day13Service.a(testInput))
+    }
+
+    @Test
+    fun `day13b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day13Service.b(testInput))
+    }
+
+    @Test
+    fun `day14a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day14Service.a(testInput))
+    }
+
+    @Test
+    fun `day14b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day14Service.b(testInput))
+    }
+
+    @Test
+    fun `day15a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day15Service.a(testInput))
+    }
+
+    @Test
+    fun `day15b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day15Service.b(testInput))
+    }
+
+    @Test
+    fun `day16a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day16Service.a(testInput))
+    }
+
+    @Test
+    fun `day16b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day16Service.b(testInput))
+    }
+
+    @Test
+    fun `day17a`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day17Service.a(testInput))
+    }
+
+    @Test
+    fun `day17b`() {
+        val testInput = """
+		""".trimIndent()
+        assertEquals(1, day17Service.b(testInput))
     }
 }

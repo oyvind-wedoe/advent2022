@@ -16,6 +16,17 @@ class Controller(
     private val day7Service: Day7Service,
     private val day8Service: Day8Service,
     private val day9Service: Day9Service,
+    private val day10Service: Day10Service,
+    private val day11Service: Day11Service,
+    private val day12Service: Day12Service,
+    private val day13Service: Day13Service,
+    private val day14Service: Day14Service,
+    private val day15Service: Day15Service,
+    private val day16Service: Day16Service,
+    private val day17Service: Day17Service,
+    private val day18Service: Day18Service,
+    private val day19Service: Day19Service,
+    private val day20Service: Day20Service,
 ) {
 
 
@@ -28,6 +39,7 @@ class Controller(
     val input7 = File("src/main/resources/input/input7.txt").readText()
     val input8 = File("src/main/resources/input/input8.txt").readText()
     val input9 = File("src/main/resources/input/input9.txt").readText()
+    val input10 = File("src/main/resources/input/input10.txt").readText()
 
     @GetMapping("/day1a")
     fun day1a(): Int {
@@ -117,5 +129,15 @@ class Controller(
     @GetMapping("/day9b")
     fun day9b(): Int {
         return day9Service.b(input9)
+    }
+
+    @GetMapping("/day10a")
+    fun day10a(): Int {
+        return day10Service.a(input10)
+    }
+
+    @GetMapping("/day10b")
+    fun day10b(): Int {
+        return day10Service.b(input10)
     }
 }
