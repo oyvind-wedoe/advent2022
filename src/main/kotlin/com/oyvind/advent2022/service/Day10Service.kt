@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service
 @Service
 class Day10Service {
 
+    //TODO: Kopier til 11
     fun a(input: List<String>): Int {
         error("not implemented")
     }

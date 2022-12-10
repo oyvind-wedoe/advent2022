@@ -1,5 +1,4 @@
 /src/main/resources/input/
-HELP.md
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar

@@ -4,6 +4,7 @@ import com.oyvind.advent2022.service.*
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
+import java.io.File
 
 @SpringBootTest
 class Advent2022ApplicationTests {
@@ -245,13 +246,63 @@ ${'$'} ls
 
     @Test
     fun `day9a`() {
+        val testInput = """
+            R 4
+            U 4
+            L 3
+            D 1
+            R 4
+            D 1
+            L 5
+            R 2
+		""".trimIndent()
 
+        assertEquals(13, day9Service.a(testInput))
+    }
+
+    @Test
+    fun `day9aFull`() {
+        assertEquals(6098, day9Service.a(File("src/main/resources/input/input9.txt").readText()))
+    }
+
+    @Test
+    fun `day9bsimple`() {
+        val testInput = """
+            R 4
+            U 4
+            L 3
+            D 1
+            R 4
+            D 1
+            L 5
+            R 2
+		""".trimIndent()
+
+        assertEquals(1, day9Service.b(testInput))
     }
 
     @Test
     fun `day9b`() {
+        val testInput = """
+            R 5
+            U 8
+            L 8
+            D 3
+            R 17
+            D 10
+            L 25
+            U 20
+		""".trimIndent()
 
+        assertEquals(36, day9Service.b(testInput))
     }
+
+    @Test
+    fun `day9bFull`() {
+        assertEquals(2597, day9Service.b(File("src/main/resources/input/input9.txt").readText()))
+    }
+
+
 
     @Test
     fun `day10a`() {
